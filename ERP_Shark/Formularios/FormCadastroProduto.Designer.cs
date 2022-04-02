@@ -32,18 +32,18 @@
             this.cbValidar = new System.Windows.Forms.CheckBox();
             this.lbValidarCod = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtReduzidoPD = new System.Windows.Forms.TextBox();
             this.lbCodigoReduzido = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDescriPD = new System.Windows.Forms.TextBox();
             this.txtFornec = new System.Windows.Forms.TextBox();
             this.lbDescricaoPrincipal = new System.Windows.Forms.Label();
             this.lbCodigoGrupo = new System.Windows.Forms.Label();
             this.btnDuplicar = new System.Windows.Forms.Button();
             this.btnAlterarValor = new System.Windows.Forms.Button();
             this.gbValor = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtOperador = new System.Windows.Forms.TextBox();
             this.txtValor = new System.Windows.Forms.TextBox();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.txtDescricaoValor = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbValor = new System.Windows.Forms.Label();
@@ -52,12 +52,27 @@
             this.gpDadosProduto = new System.Windows.Forms.GroupBox();
             this.txtEspecie = new System.Windows.Forms.TextBox();
             this.lbEspecie = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.txtCGrupo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbDescrib = new System.Windows.Forms.Label();
+            this.lbDesc = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.gbValor.SuspendLayout();
             this.gpDadosProduto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // cbValidar
             // 
@@ -87,12 +102,12 @@
             this.button1.TabIndex = 44;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txtReduzidoPD
             // 
-            this.textBox3.Location = new System.Drawing.Point(363, 48);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(84, 20);
-            this.textBox3.TabIndex = 43;
+            this.txtReduzidoPD.Location = new System.Drawing.Point(363, 48);
+            this.txtReduzidoPD.Name = "txtReduzidoPD";
+            this.txtReduzidoPD.Size = new System.Drawing.Size(84, 20);
+            this.txtReduzidoPD.TabIndex = 45;
             // 
             // lbCodigoReduzido
             // 
@@ -103,12 +118,12 @@
             this.lbCodigoReduzido.TabIndex = 42;
             this.lbCodigoReduzido.Text = "Codigo";
             // 
-            // textBox2
+            // txtDescriPD
             // 
-            this.textBox2.Location = new System.Drawing.Point(82, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 20);
-            this.textBox2.TabIndex = 41;
+            this.txtDescriPD.Location = new System.Drawing.Point(82, 73);
+            this.txtDescriPD.Name = "txtDescriPD";
+            this.txtDescriPD.Size = new System.Drawing.Size(182, 20);
+            this.txtDescriPD.TabIndex = 42;
             // 
             // txtFornec
             // 
@@ -155,9 +170,9 @@
             // 
             // gbValor
             // 
-            this.gbValor.Controls.Add(this.textBox6);
+            this.gbValor.Controls.Add(this.txtOperador);
             this.gbValor.Controls.Add(this.txtValor);
-            this.gbValor.Controls.Add(this.txtDescricao);
+            this.gbValor.Controls.Add(this.txtDescricaoValor);
             this.gbValor.Controls.Add(this.txtCodigo);
             this.gbValor.Controls.Add(this.label1);
             this.gbValor.Controls.Add(this.lbValor);
@@ -171,12 +186,13 @@
             this.gbValor.TabStop = false;
             this.gbValor.Text = "Valor";
             // 
-            // textBox6
+            // txtOperador
             // 
-            this.textBox6.Location = new System.Drawing.Point(198, 34);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(95, 20);
-            this.textBox6.TabIndex = 11;
+            this.txtOperador.Location = new System.Drawing.Point(198, 34);
+            this.txtOperador.Name = "txtOperador";
+            this.txtOperador.Size = new System.Drawing.Size(95, 20);
+            this.txtOperador.TabIndex = 11;
+            this.txtOperador.TextChanged += new System.EventHandler(this.txtOperador_TextChanged);
             // 
             // txtValor
             // 
@@ -185,19 +201,19 @@
             this.txtValor.Size = new System.Drawing.Size(57, 20);
             this.txtValor.TabIndex = 10;
             // 
-            // txtDescricao
+            // txtDescricaoValor
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(57, 34);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(66, 20);
-            this.txtDescricao.TabIndex = 9;
+            this.txtDescricaoValor.Location = new System.Drawing.Point(57, 34);
+            this.txtDescricaoValor.Name = "txtDescricaoValor";
+            this.txtDescricaoValor.Size = new System.Drawing.Size(66, 20);
+            this.txtDescricaoValor.TabIndex = 9;
             // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(4, 34);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(41, 20);
-            this.txtCodigo.TabIndex = 8;
+            this.txtCodigo.TabIndex = 44;
             // 
             // label1
             // 
@@ -256,7 +272,7 @@
             this.txtEspecie.Location = new System.Drawing.Point(57, 12);
             this.txtEspecie.Name = "txtEspecie";
             this.txtEspecie.Size = new System.Drawing.Size(31, 20);
-            this.txtEspecie.TabIndex = 4;
+            this.txtEspecie.TabIndex = 43;
             // 
             // lbEspecie
             // 
@@ -268,20 +284,12 @@
             this.lbEspecie.TabIndex = 3;
             this.lbEspecie.Text = "Espécie*";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel1.Location = new System.Drawing.Point(1, 99);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(607, 149);
-            this.panel1.TabIndex = 33;
-            // 
             // txtCGrupo
             // 
             this.txtCGrupo.Location = new System.Drawing.Point(224, 47);
             this.txtCGrupo.Name = "txtCGrupo";
             this.txtCGrupo.Size = new System.Drawing.Size(73, 20);
-            this.txtCGrupo.TabIndex = 47;
+            this.txtCGrupo.TabIndex = 41;
             // 
             // label2
             // 
@@ -292,18 +300,45 @@
             this.label2.TabIndex = 48;
             this.label2.Text = "Fornecedor*";
             // 
+            // lbDescrib
+            // 
+            this.lbDescrib.AutoSize = true;
+            this.lbDescrib.Location = new System.Drawing.Point(275, 79);
+            this.lbDescrib.Name = "lbDescrib";
+            this.lbDescrib.Size = new System.Drawing.Size(0, 13);
+            this.lbDescrib.TabIndex = 49;
+            // 
+            // lbDesc
+            // 
+            this.lbDesc.AutoSize = true;
+            this.lbDesc.Location = new System.Drawing.Point(273, 77);
+            this.lbDesc.Name = "lbDesc";
+            this.lbDesc.Size = new System.Drawing.Size(0, 13);
+            this.lbDesc.TabIndex = 50;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(1, 99);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(607, 147);
+            this.dataGridView2.TabIndex = 51;
+            // 
             // FormCadastroProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(612, 401);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.lbDesc);
+            this.Controls.Add(this.lbDescrib);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCGrupo);
             this.Controls.Add(this.cbValidar);
             this.Controls.Add(this.lbValidarCod);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtReduzidoPD);
             this.Controls.Add(this.lbCodigoReduzido);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtDescriPD);
             this.Controls.Add(this.txtFornec);
             this.Controls.Add(this.lbDescricaoPrincipal);
             this.Controls.Add(this.lbCodigoGrupo);
@@ -311,10 +346,8 @@
             this.Controls.Add(this.btnAlterarValor);
             this.Controls.Add(this.gbValor);
             this.Controls.Add(this.gpDadosProduto);
-            this.Controls.Add(this.panel1);
             this.Name = "FormCadastroProduto";
-            this.Text = "Cadastro de Produto";
-            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Text = "PRDFM236 - Cadastro de Produto";
             this.Controls.SetChildIndex(this.gpDadosProduto, 0);
             this.Controls.SetChildIndex(this.gbValor, 0);
             this.Controls.SetChildIndex(this.btnAlterarValor, 0);
@@ -322,18 +355,22 @@
             this.Controls.SetChildIndex(this.lbCodigoGrupo, 0);
             this.Controls.SetChildIndex(this.lbDescricaoPrincipal, 0);
             this.Controls.SetChildIndex(this.txtFornec, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
+            this.Controls.SetChildIndex(this.txtDescriPD, 0);
             this.Controls.SetChildIndex(this.lbCodigoReduzido, 0);
-            this.Controls.SetChildIndex(this.textBox3, 0);
+            this.Controls.SetChildIndex(this.txtReduzidoPD, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.lbValidarCod, 0);
             this.Controls.SetChildIndex(this.cbValidar, 0);
             this.Controls.SetChildIndex(this.txtCGrupo, 0);
             this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.lbDescrib, 0);
+            this.Controls.SetChildIndex(this.lbDesc, 0);
+            this.Controls.SetChildIndex(this.dataGridView2, 0);
             this.gbValor.ResumeLayout(false);
             this.gbValor.PerformLayout();
             this.gpDadosProduto.ResumeLayout(false);
             this.gpDadosProduto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,18 +381,18 @@
         private System.Windows.Forms.CheckBox cbValidar;
         private System.Windows.Forms.Label lbValidarCod;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtReduzidoPD;
         private System.Windows.Forms.Label lbCodigoReduzido;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDescriPD;
         private System.Windows.Forms.TextBox txtFornec;
         private System.Windows.Forms.Label lbDescricaoPrincipal;
         private System.Windows.Forms.Label lbCodigoGrupo;
         private System.Windows.Forms.Button btnDuplicar;
         private System.Windows.Forms.Button btnAlterarValor;
         private System.Windows.Forms.GroupBox gbValor;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtOperador;
         private System.Windows.Forms.TextBox txtValor;
-        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.TextBox txtDescricaoValor;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbValor;
@@ -364,8 +401,10 @@
         private System.Windows.Forms.GroupBox gpDadosProduto;
         private System.Windows.Forms.TextBox txtEspecie;
         private System.Windows.Forms.Label lbEspecie;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtCGrupo;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbDescrib;
+        private System.Windows.Forms.Label lbDesc;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

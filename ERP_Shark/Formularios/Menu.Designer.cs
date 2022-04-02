@@ -80,18 +80,21 @@
             this.logToolStripMenuItem.Name = "logToolStripMenuItem";
             this.logToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.logToolStripMenuItem.Text = "&Trocar Usuario";
+            this.logToolStripMenuItem.Click += new System.EventHandler(this.logToolStripMenuItem_Click);
             // 
             // executarToolStripMenuItem
             // 
             this.executarToolStripMenuItem.Name = "executarToolStripMenuItem";
             this.executarToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.executarToolStripMenuItem.Text = "&Executar";
+            this.executarToolStripMenuItem.Click += new System.EventHandler(this.executarToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.sairToolStripMenuItem.Text = "&Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // ferramentasToolStripMenuItem
             // 
@@ -123,6 +126,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 1;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -165,6 +169,7 @@
             this.btnVenda.TabIndex = 2;
             this.btnVenda.Text = "Venda";
             this.btnVenda.UseVisualStyleBackColor = false;
+            this.btnVenda.Click += new System.EventHandler(this.btnVenda_Click);
             // 
             // btnEntrada
             // 

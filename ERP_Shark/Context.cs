@@ -7,14 +7,12 @@ namespace ERP_Shark
 {
     public class Context : DbContext
     {
-        public Context() : base ("BD")
-{
-}
-        public DbSet<DtoUsuario> usuario { get; set; }
 
-        internal void SaveChanges()
+        public Context() : base("DB")
         {
-            throw new NotImplementedException();
         }
+        public DbSet<DtoUsuario> usuario { get; set; }
+        public DbSet<DtoProduto> produto { get; set; }
+
     }
 }

@@ -33,10 +33,13 @@ namespace ERP_Shark
                 MessageBox.Show("Preencha os campos corretamente");
                 txtSenha.Clear();
                 txtUsuario.Clear();
+
             }
             Menu m = new Menu(NomeUser); // abrir outro form 
             m.Show();
             this.Show();
+
+           
         }
     }
 }

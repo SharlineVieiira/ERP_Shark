@@ -9,8 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ERP_Shark.Dto
 {
     
-
-    
+        
         public class DtoUsuario2
         {
             public int id { get; set; }

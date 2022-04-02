@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ERP_Shark.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,14 +29,46 @@ namespace ERP_Shark
         private void btnEntrada_Click(object sender, EventArgs e)
         {
             FormEntrada formEntrada = new FormEntrada();
-            formEntrada.Show(); 
+            formEntrada.Show();
         }
 
         private void btnUsuarioMenu_Click(object sender, EventArgs e)
         {
+
+            FormUsuario f = new FormUsuario();
+            f.Show();
+
+        }
+
+        private void btnVenda_Click(object sender, EventArgs e)
+        {
+            FormVendas vendas = new FormVendas();   
+            vendas.Show();  
+        }
+
+        private void logToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           Shar_ERP shar_ERP = new Shar_ERP();
+           
+            this.Close();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //FECHAR TUDO.... ERRO 
             
-            FormCadastroUsuario CadUser = new FormCadastroUsuario();
-            CadUser.Show();
+            this.Close(); 
+        }
+
+        private void executarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Executar executar = new Executar();
+            executar.Show();    
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

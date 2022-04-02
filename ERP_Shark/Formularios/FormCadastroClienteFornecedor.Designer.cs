@@ -1,6 +1,6 @@
-﻿namespace ERP_Shark
+﻿namespace ERP_Shark.Formularios
 {
-    partial class FormEntrada
+    partial class FormCadastroCliente___Fornecedor
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // FormEntrada
+            // FormCadastroCliente___Fornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(612, 401);
-            this.Name = "FormEntrada";
-            this.Text = "CMPFM020 - Entrada";
+            this.Name = "FormCadastroCliente___Fornecedor";
+            this.Text = "PESFM010 - Cadastro Pessoa";
             this.ResumeLayout(false);
 
         }
